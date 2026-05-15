@@ -1,4 +1,4 @@
-# MEM Management Thesis Skills
+# MEM Thesis Skills
 
 这是一个面向 MEM、工程管理、项目管理、公共管理等管理类专业硕士论文写作的 Codex skill。它的目标不是替代学校模板，也不是生成一篇脱离材料的通用论文，而是帮助使用者把真实项目、组织问题和已有材料整理成符合管理类研究生论文逻辑的选题、开题报告、大纲和章节草稿。
 
@@ -43,13 +43,13 @@
 核心 skill 位于：
 
 ```text
-skills/mem-management-thesis-writer/SKILL.md
+skills/mem-thesis-writer/SKILL.md
 ```
 
 界面元数据位于：
 
 ```text
-skills/mem-management-thesis-writer/agents/openai.yaml
+skills/mem-thesis-writer/agents/openai.yaml
 ```
 
 ## 使用方式
@@ -57,19 +57,19 @@ skills/mem-management-thesis-writer/agents/openai.yaml
 在 Codex 中可以这样调用：
 
 ```text
-Use $mem-management-thesis-writer 帮我把这个管理类专硕论文题目收敛一下，说明研究对象、核心问题和不建议写入题目的内容。
+Use $mem-thesis-writer 帮我把这个管理类专硕论文题目收敛一下，说明研究对象、核心问题和不建议写入题目的内容。
 ```
 
 ```text
-Use $mem-management-thesis-writer 根据我这个项目材料，先做论文证据清单，再给出 MEM 开题报告大纲。
+Use $mem-thesis-writer 根据我这个项目材料，先做论文证据清单，再给出 MEM 开题报告大纲。
 ```
 
 ```text
-Use $mem-management-thesis-writer 审查我的开题报告，按“必须补齐、建议修改、可最后优化”列出问题。
+Use $mem-thesis-writer 审查我的开题报告，按“必须补齐、建议修改、可最后优化”列出问题。
 ```
 
 ```text
-Use $mem-management-thesis-writer 把这一段论文文字去 AI 味，但不要增加事实、数据或引用。
+Use $mem-thesis-writer 把这一段论文文字去 AI 味，但不要增加事实、数据或引用。
 ```
 
 ## 输出风格
@@ -94,7 +94,7 @@ Use $mem-management-thesis-writer 把这一段论文文字去 AI 味，但不要
 
 当前仓库已可作为公开技能包源：
 
-- 仓库地址：`https://github.com/coo1j0j0/mem-management-thesis-skills`
+- 仓库地址：`https://github.com/coo1j0j0/mem-thesis-skills`
 - 仓库可见性：public
-- 可安装路径：`skills/mem-management-thesis-writer/`
+- 可安装路径：`skills/mem-thesis-writer/`
 - 后续如果增加学校专项版本，建议新增独立 skill，不要把学校硬格式塞进这个通用 skill
