@@ -90,11 +90,11 @@ Use $mem-management-thesis-writer 把这一段论文文字去 AI 味，但不要
 
 如果需要严格符合某所学校的封面、开题表、页边距、字体、签字页、匿名要求或提交格式，应当同时提供学校模板和规范文件，并以学校文件为最终依据。
 
-## 发布建议
+## 当前发布状态
 
-当前仓库可以作为技能包源。正式公开发布时，建议：
+当前仓库已可作为公开技能包源：
 
-- 将仓库命名为 `mem-management-thesis-skills`
-- 将仓库设为 public
-- 保持 `skills/mem-management-thesis-writer/` 作为可安装路径
-- 后续如果增加学校专项版本，再新增独立 skill，不要把学校硬格式塞进这个通用 skill
+- 仓库地址：`https://github.com/coo1j0j0/mem-management-thesis-skills`
+- 仓库可见性：public
+- 可安装路径：`skills/mem-management-thesis-writer/`
+- 后续如果增加学校专项版本，建议新增独立 skill，不要把学校硬格式塞进这个通用 skill
