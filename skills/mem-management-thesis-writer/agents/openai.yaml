@@ -1,0 +1,7 @@
+interface:
+  display_name: "MEM管理类论文写作"
+  short_description: "面向MEM和管理类专硕论文的选题、开题、大纲、材料和去AI味写作。"
+  default_prompt: "Use $mem-management-thesis-writer to help me turn my management thesis materials into a clear topic, opening report, outline, or thesis-ready Chinese section."
+
+policy:
+  allow_implicit_invocation: true
