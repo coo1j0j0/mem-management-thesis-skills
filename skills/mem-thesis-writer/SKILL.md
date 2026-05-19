@@ -1,6 +1,6 @@
 ---
 name: mem-thesis-writer
-description: Write, revise, audit, and plan MEM, engineering management, project management, public management, and other management-oriented professional master's thesis work in Chinese. Use for topic selection, opening reports, thesis outlines, case-study logic, evidence planning, chapter structure, methodology simplification, literature gap diagnosis, citation boundary checks, de-AI academic polishing, advisor-facing revision plans, and thesis-ready Chinese prose for management graduate papers.
+description: Write, revise, audit, and plan MEM, engineering management, project management, public management, and other management-oriented professional master's thesis work in Chinese. Use for topic selection, opening reports, thesis outlines, case-study logic, evidence planning, chapter structure, methodology simplification, literature gap diagnosis, citation boundary checks, de-AI academic polishing, advisor-facing revision plans, thesis-ready Chinese prose, and SWJTU master's thesis format checks when the provided school template applies.
 ---
 
 # MEM Thesis Writer
@@ -23,8 +23,17 @@ Classify the task first:
 - `section-draft`: write a specific thesis section in natural academic Chinese.
 - `polish`: remove AI-sounding patterns while preserving facts, claims, and scope.
 - `defense-prep`: prepare advisor-facing revision notes, expected questions, or concise explanation scripts.
+- `format-check`: audit school hard-format requirements such as cover/title pages, abstract, directory, headings, figures/tables, references, page setup, binding order, and submission-form fields.
 
 If a school template, advisor note, sample thesis, or local folder is available, inspect it before proposing structure. If no template is available, state that the output is a generic management professional master's draft and mark school-specific fields as `待按学校模板确认`.
+
+## Bundled References
+
+Load these files only when the user request calls for them:
+
+- `references/swjtu-master-thesis-format.md`: use for 西南交通大学硕士论文 / MEM论文 hard-format checks, including cover and title-page fields, originality and authorization pages, abstract/keywords, directory, heading hierarchy, fonts, page setup, references, printing, and binding. Keep these requirements separate from case-analysis writing logic.
+
+When layout fidelity matters, use the user's original Word template if it is available; do not flatten cover, declaration, authorization, signature, or date pages into prose.
 
 ## Core Thesis Logic
 
@@ -136,6 +145,15 @@ Lead with the issues:
 
 Each issue should name the affected section, explain why it is a risk, and give a concrete fix.
 
+### Format Check
+
+When checking SWJTU/MEM hard-format requirements, first load `references/swjtu-master-thesis-format.md`, then return:
+
+- `必须按模板处理`: fixed pages, fields, signatures, dates, declaration/authorization wording, and other items that should not be freely rewritten.
+- `格式风险`: order, headings, page numbers, headers, figure/table lists, fonts, references, and binding/printing issues that may affect submission.
+- `可写作优化`: abstract, keywords, chapter titles, conclusion, acknowledgements, and reference quality issues that can be revised through prose.
+- `待补充字段`: missing administrative fields that cannot be fabricated.
+
 ### Section Draft
 
 Ask only if a missing fact blocks the section. Otherwise write with `待补充` placeholders. Keep paragraphs thesis-ready and avoid explaining the writing process unless the user asks.
@@ -147,6 +165,7 @@ Before saying a thesis section or plan is ready, verify:
 - title, research object, problem, method, and chapter structure are consistent
 - every factual claim has a source category or is clearly marked for verification
 - school-specific fields are either confirmed or marked `待按学校模板确认`
+- school hard-format requirements were checked against the bundled reference when the task is SWJTU-specific
 - methods are proportionate to available evidence
 - evaluation indicators are few, realistic, and collectable
 - wording does not sound promotional, consultant-like, or AI-generated
